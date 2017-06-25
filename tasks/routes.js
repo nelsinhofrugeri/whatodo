@@ -17,5 +17,10 @@ module.exports = [
                 })
             }
         }
+    },
+    {
+        method: 'GET',
+        path: '/task',
+        handler: taskHandler.list
     }
 ];

@@ -10,12 +10,17 @@ class TaskHandler {
         Task.create({
             title: payload.title,
             description: payload.description
-        });
+        })
+            .then((result) => {
+                reply(result);
+            })
+            .catch((err) => {
+                reply(err);
+            });
+    }
 
-        reply({
-            title: payload.title,
-            description: payload.description
-        });
+    list (request, reply) {
+        Task.findAll()
     }
 
 }
