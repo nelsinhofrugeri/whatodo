@@ -22,5 +22,15 @@ module.exports = [
         method: 'GET',
         path: '/task',
         handler: taskHandler.list
+    },
+    {
+        method: 'PUT',
+        path: '/task/{uuid}',
+        handler: taskHandler.update
+    },
+    {
+        method: 'DELETE',
+        path: '/task/{uuid}',
+        handler: taskHandler.delete
     }
 ];
