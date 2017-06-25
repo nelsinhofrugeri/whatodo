@@ -21,6 +21,12 @@ class TaskHandler {
 
     list (request, reply) {
         Task.findAll()
+            .then((result) => {
+                reply(result);
+            })
+            .catch((err) => {
+                reply(err);
+            });
     }
 
 }
