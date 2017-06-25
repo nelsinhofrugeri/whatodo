@@ -5,7 +5,8 @@ const Acquaint = require('acquaint');
 const server = new Hapi.Server();
 
 server.connection({
-    port: 9000
+    port: 9000,
+    host: '0.0.0.0'
 });
 
 server.register({
